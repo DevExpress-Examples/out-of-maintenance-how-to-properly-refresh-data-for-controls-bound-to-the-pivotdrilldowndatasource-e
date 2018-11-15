@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DrillDownWindow.xaml](./CS/Q292166/DrillDownWindow.xaml) (VB: [DrillDownWindow.xaml.vb](./VB/Q292166/DrillDownWindow.xaml.vb))
+* [DrillDownWindow.xaml.cs](./CS/Q292166/DrillDownWindow.xaml.cs) (VB: [DrillDownWindow.xaml.vb](./VB/Q292166/DrillDownWindow.xaml.vb))
+* [MainWindow.xaml](./CS/Q292166/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/Q292166/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/Q292166/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/Q292166/MainWindow.xaml))
+<!-- default file list end -->
 # How to properly refresh data for controls bound to the PivotDrillDownDataSource
 
 

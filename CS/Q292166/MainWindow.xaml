@@ -11,11 +11,26 @@
             <RowDefinition />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl Name="salesPersonPivot" CellClick="OnSalesPersonPivotCellClick" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+        <dxpg:PivotGridControl Name="salesPersonPivot" 
+                               CellClick="OnSalesPersonPivotCellClick" 
+                               Grid.ColumnSpan="2"
+                               DataProcessingEngine="Optimized">
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField FieldName="Sales Person" Area="RowArea" />
-                <dxpg:PivotGridField FieldName="CategoryName" Area="ColumnArea" />
-                <dxpg:PivotGridField FieldName="Extended Price" Area="DataArea" />
+                <dxpg:PivotGridField Area="RowArea" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Sales Person"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Area="ColumnArea" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="CategoryName"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField  Area="DataArea" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Extended Price"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
         <Button Grid.Column="1" Grid.Row="1" Click="OnReloadButtonClick">Reload</Button>
